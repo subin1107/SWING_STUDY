@@ -10,11 +10,10 @@ def readrec(): #이전의 기록을 파일에서 가져오는 함수
     nrec.clear()
     f=open("C:/Users/btsiu/Desktop/swing.txt",'r') #파일에 있던 내용 기록 읽어오기 위해 swing.txt 문서 열기
     lines=f.readlines()
-    for i in lines: #각 라인을 읽어옴
-        for i in range (0, len(lines),2): #2번 피드백: 두번씩 출력되는 것 해결
+    for i in range(0, len(lines)): #각 라인을 읽어옴
             nr=lines[i].split(':') #각라인을 : 앞뒤로 나눈 뒤
             nrec.append(nr[0]) #앞부분은 닉네임이므로 nrec리스트에
-            rec.append(int(nr[1].strip('\n'))) #뒷부분은 기록이므로 rec리스트에 삽입
+            rec.append(int(nr[1])) #뒷부분은 기록이므로 rec리스트에 삽입
     f.close()
 
 def writerec(): #기록 파일에 저장하는 함수
