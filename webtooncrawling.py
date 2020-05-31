@@ -25,7 +25,7 @@ print(name+" 디렉토리 생성 완료")
 #웹툰의 각 회차의 주소 추출
 title = result.findAll("td",{"class":"title"})
 
-#각 회차마다 지행
+#각 회차마다 시행
 for t in title:
     #소녀의 세계 각 회차별 웹툰 요청 및 파싱
     html1=urllib.request.urlopen("http://comic.naver.com"+t.a['href'])
